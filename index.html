@@ -12,10 +12,11 @@
             margin-top: 100px;
             position: relative;
             overflow: hidden;
+            height: 100vh;
         }
 
         .background-video {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -62,13 +63,13 @@
 </head>
 
 <body>
-    <video class="background-video"  controls="false" autoplay muted loop playsinline>
+    <video class="background-video" autoplay muted loop playsinline>
         <source src="hearts1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="container">
         <h1>Will you be my Valentine?!💓👀</h1>
-        <button id="yes" class="btn" onclick="alert('IK it lol!🥹💓')">Yes</button>
+        <button id="yes" class="btn" onclick="alert('IK it lol!😗')">Yes</button>
         <button id="no" class="btn" onmouseover="moveButton()">No</button>
     </div>
 
