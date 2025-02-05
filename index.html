@@ -10,6 +10,18 @@
             font-family: Arial, sans-serif;
             background: #ffe6e6;
             margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .container {
@@ -18,6 +30,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
@@ -44,30 +58,23 @@
             position: absolute;
         }
 
-        .background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
     </style>
 </head>
 
 <body>
-    <video class="background-video" autoplay muted loop controls="false">
+    <video class="background-video"  controls="false" autoplay muted loop playsinline>
         <source src="hearts1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
     <div class="container">
-    <h1>Will you be my Valentine?!💓👀</h1>
-    <button id="yes" class="btn" onclick="alert('IK it lol!😗')">Yes</button>
-    <button id="no" class="btn" onmouseover="moveButton()">No</button>
+        <h1>Will you be my Valentine?!💓👀</h1>
+        <button id="yes" class="btn" onclick="alert('IK it lol!🥹💓')">Yes</button>
+        <button id="no" class="btn" onmouseover="moveButton()">No</button>
     </div>
 
     <script>
+        document.querySelector('.background-video').controls = false;
+
         function moveButton() {
             let x = Math.random() * (window.innerWidth - 100);
             let y = Math.random() * (window.innerHeight - 100);
